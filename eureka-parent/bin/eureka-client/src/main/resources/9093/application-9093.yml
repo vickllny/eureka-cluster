@@ -1,0 +1,10 @@
+profile: 9093
+server:
+  port: 9093
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://10.211.55.12:8761/eureka/,http://10.211.55.11:8761/eureka/
